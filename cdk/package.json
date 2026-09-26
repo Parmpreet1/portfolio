@@ -1,0 +1,23 @@
+{
+  "name": "parmpreet-portfolio-cdk",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build:site": "npm --prefix .. run build",
+    "synth": "npm run build:site && cdk synth",
+    "diff": "npm run build:site && cdk diff PortfolioStack",
+    "deploy": "npm run build:site && cdk deploy PortfolioStack",
+    "destroy": "cdk destroy PortfolioStack"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.256.1",
+    "constructs": "^10.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "aws-cdk": "^2.1030.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
