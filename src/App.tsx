@@ -16,7 +16,6 @@ import {
   education,
   publications,
   terminal,
-  nowBuilding,
   type Project,
 } from './data.ts'
 
@@ -461,23 +460,6 @@ function About() {
             </p>
           ))}
         </article>
-
-        <a
-          className="tile tile--now spot reveal"
-          href={nowBuilding.url}
-          target="_blank"
-          rel="noreferrer"
-          onPointerMove={spotlight}
-        >
-          <span className="tile__label">
-            <span className="pulse" aria-hidden="true" /> Now building
-          </span>
-          <h3 className="tile__big">{nowBuilding.name}</h3>
-          <p>{nowBuilding.blurb}</p>
-          <span className="tile__link">
-            {nowBuilding.url.replace(/^https?:\/\//, '')} <span aria-hidden="true">↗</span>
-          </span>
-        </a>
 
         <article className="tile tile--place spot reveal" onPointerMove={spotlight}>
           <span className="tile__label">Based in</span>
