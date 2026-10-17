@@ -156,6 +156,9 @@ export const skills: SkillGroup[] = [
     items: [
       'AI Agent Development',
       'RAG Pipelines',
+      'LangChain',
+      'LangGraph',
+      'LangSmith',
       'Prompt Engineering',
       'Custom AI Skills / Tooling',
       'Claude Code',
@@ -171,11 +174,11 @@ export const projects: Project[] = [
     blurb:
       'An AI website builder: describe a business in a few sentences and get a written, designed site, ready to edit and export as HTML, React, Next.js or WordPress.',
     points: [
-      'Turns a short business description into a complete multi-page or one-page website, with the copy written for it.',
-      'Starts from 225 built-in layouts across 16 industries, or from shared and personal templates.',
-      'Exports to HTML, React, Next.js or WordPress, with sites, media and contact forms managed in one workspace.',
+      'Built the core website builder with LangChain and LangGraph, taking a business description through to finished pages and copy.',
+      'Built AI-driven site configuration with LangChain and LangGraph, using LangSmith to trace, debug and monitor the LLM workflows.',
+      'Exports to HTML, React, Next.js or WordPress, starting from 225 built-in layouts across 16 industries.',
     ],
-    tags: ['Next.js', 'React.js', 'Generative AI', 'AWS'],
+    tags: ['LangChain', 'LangGraph', 'LangSmith', 'Next.js'],
     link: 'https://app.templatetoaster.com/',
     featured: true,
   },
