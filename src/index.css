@@ -818,9 +818,35 @@ a.tile:hover {
   color: var(--text);
   letter-spacing: -0.01em;
 }
+.tile--now {
+  grid-column: span 5;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+.tile--now p,
+.tile--now .tile__label {
+  color: color-mix(in srgb, var(--accent-ink) 72%, transparent);
+}
+.tile--now .pulse,
+.tile--now .pulse::after {
+  background: var(--accent-ink);
+}
+.tile--now .tile__link {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+}
+.tile--now.spot::before {
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.35),
+    transparent 60%
+  );
+}
 .tile--place {
   grid-column: span 5;
-  grid-row: span 2;
 }
 .tile__time {
   font-size: 1.5rem;
@@ -833,7 +859,6 @@ a.tile:hover {
   letter-spacing: 0.04em;
 }
 .tile__note {
-  margin-top: auto;
   font-size: 14px;
 }
 .tile--ai {
@@ -898,9 +923,9 @@ a.tile:hover {
   border-color: var(--accent);
 }
 
-/* Projects bento: lead project full width, rest half width; featured get more padding */
+/* Projects bento: lead project full width, featured = half width, rest = thirds */
 .project {
-  grid-column: span 6;
+  grid-column: span 4;
   gap: 10px;
 }
 .project--featured {
@@ -1187,9 +1212,14 @@ a.tile:hover {
     max-width: 560px;
   }
   .tile--about,
+  .tile--now,
   .tile--place {
     grid-column: span 12;
     grid-row: auto;
+  }
+  .tile--now,
+  .tile--place {
+    grid-column: span 6;
   }
   .tile--skill-0,
   .tile--skill-1,

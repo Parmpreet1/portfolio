@@ -101,10 +101,16 @@ export const terminal: TerminalLine[] = [
   { kind: 'cmd', text: 'cat stack.txt' },
   { kind: 'out', text: 'react  typescript  next.js  node  aws  postgres' },
   { kind: 'cmd', text: 'ls ./shipping' },
-  { kind: 'out', text: 'templatetoaster/   definiteseo/   ai-seo-writer/' },
+  { kind: 'out', text: 'templatetoaster/   definiteseo/   ai‑seo‑writer/   skimora/' },
   { kind: 'cmd', text: 'deploy --prod' },
   { kind: 'ok', text: '✓ live in 51s, ready for the next problem' },
 ]
+
+export const nowBuilding = {
+  name: 'Skimora',
+  blurb: 'An AI video summarizer: key insights, jump-to timestamps and chat for any video. Designed and shipped end to end.',
+  url: 'https://zeqlabs.ai/skimora',
+}
 
 export const stats: Stat[] = [
   { value: '3+', label: 'Years experience' },
@@ -115,7 +121,7 @@ export const stats: Stat[] = [
 export const about: string[] = [
   `I'm a full-stack developer and team lead at Sofster with 3+ years of experience designing and building scalable web applications and AI-powered features using React.js, TypeScript, Next.js, Node.js, and AWS.`,
   `I lead feature delivery end-to-end (from system design and backend architecture to database design and deployment) with a strong focus on performance, security, and clean architecture. I also build WordPress plugins and custom AI tooling.`,
-  `Lately I've been deep in generative AI: building custom AI agents and skills, RAG pipelines, and automated dev workflows, and using tools like Claude Code and Cursor to move faster.`,
+  `Lately I've been deep in generative AI: building custom AI agents and skills, RAG pipelines, and automated dev workflows, and using tools like Claude Code and Cursor to move faster. I also build my own AI products; the current one is Skimora.`,
 ]
 
 export const skills: SkillGroup[] = [
@@ -210,6 +216,19 @@ export const projects: Project[] = [
     tags: ['React.js', 'PHP', 'WordPress', 'Generative AI'],
     link: 'https://wordpress.org/plugins/seo-with-definite-seo',
     featured: true,
+  },
+  {
+    title: 'Skimora',
+    context: 'Independent product',
+    blurb:
+      'An AI video summarizer (YouTube, Vimeo, TikTok, uploads) I design, build and ship end to end, from frontend to AWS infrastructure.',
+    points: [
+      'Chrome extension and Next.js web app that turn videos from YouTube, Vimeo, TikTok, Instagram or an upload into key insights with jump-to timestamps and chat.',
+      'AWS backend defined with CDK, deployed and run in production.',
+    ],
+    tags: ['AI', 'Next.js', 'AWS', 'Chrome extension'],
+    link: 'https://zeqlabs.ai/skimora',
+    featured: false,
   },
   {
     title: 'Moosan Club: Ecommerce Platform',
